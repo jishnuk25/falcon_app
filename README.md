@@ -1,6 +1,8 @@
 # falcon_app
 provision and deployment using aws, vault, terraform, ansible, jenkins, docker, python app
-* We will build two servers (AWS EC2) with Terraform (Infra as code) and then configure them with the requirements needed for the project. Box one will be Jenkins and Box two will be configured for Docker and able to listen on port 8000 for our python app using the Falcon framework.
+* We will build two servers (AWS EC2) with Terraform (Infra as code) and then configure them with the requirements needed for the project. Box one will be Jenkins and Box two will be configured for Docker and able to listen on port 8000 for our python app using the Falcon framework.*
+
+
 1:  Set Up AWS User and Access
 
   Click 'Users' and create a new user. Call this user what you'd like and provide "Programmatic Access".
