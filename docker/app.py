@@ -17,4 +17,4 @@ hey = HelloResource()
 there = Page2Resource()
 
 app.add_route('/', hey)
-app.add_route('/', there)
+app.add_route('/page2', there)

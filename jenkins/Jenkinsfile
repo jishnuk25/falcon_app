@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage("deploy") {
+            steps {
+                withCredentials([sshUserPrivateKey(credentialsId: 'eb60d342-a389-42fd-a1bc-eb4ab02986dd', keyFileVariable: 'secret')]) {
+                   
+                   sh'''
+                    ssh -o StrictHostKeyChecking=no ubuntu@172.31.49.52 -i $secret "
+                        sudo docker stop -f falconapp
+                        sudo docker rm -f falconapp
+                        sudo docker run --rm -itd --name falconapp -p 8000:8000 25795/falcon_app:devops
+                    "
+                   '''
+                }
+            }
+        }
+    }
+}
