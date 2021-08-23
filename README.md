@@ -30,6 +30,9 @@ provision and deployment using aws, vault, terraform, ansible, jenkins, docker, 
     aws-vault exec devops_01
 
     Awesome! Now we are ready to start working from our machine and creating resources in the cloud!
+    
+    [backend needs to be provided for aws-vault. aws-vault supports several backends to store credentials, example we can set AWS_VAULT_BACKEND="file" to use an encrypted file.
+    for it to be done - export AWS_VAULT_BACKEND="file"]
  
  2: Creating the environment in Terraform
    
